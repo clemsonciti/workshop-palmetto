@@ -14,7 +14,7 @@ Currently, the Palmetto cluster is ranked at #392 in the list of the world's mos
 
 The Almetto cluster is maintained by two teams: a team of system administrators, who works directly at the cluster, and monitors its hardware and operating system, and a team of *research facilitators*, who work with the Palmetto users. The two teams work very closely together. 
 
-<img src="../fig/iti_flyer.png" style="height:350px">
+<img src="../fig/citi_flyer.png" style="height:350px">
 
 We maintain a [very extensive website]("https://www.palmetto.clemson.edu/palmetto/") which hosts plenty of information for Palmetto users. 
 
