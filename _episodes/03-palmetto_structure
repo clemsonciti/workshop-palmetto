@@ -34,6 +34,9 @@ $ cat /etc/hardware-table
 This will print out a text file with the hardware info. Please make sure you type exactly as shown; Linux is case-sensitive space-sensitive, 
 and typo-sensitive. The output will look something like this:
 
+BLAH BLAH
+
+
 ~~~
 [gyourga@login001 ~]$ cat /etc/hardware-table
 
