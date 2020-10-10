@@ -8,11 +8,11 @@ objectives:
 - "Logging into Palmetto from a local Mac / Windows computer."
 ---
 
-Basic structure of the cluster
+Basic structure of the cluster:
 
 <img src="../fig/palmetto-structure.png" alt="Structure of the Palmetto Cluster" style="height:350px">
 
-The computers that make up the Palmetto cluster are called *nodes*. Most of the nodes on Palmetto are *compute ndes*, 
+The computers that make up the Palmetto cluster are called *nodes*. Most of the nodes on Palmetto are *compute nodes*, 
 that can perform fast calculations on large amounts of data. There is also a special node called the *login node*; it runs the server, 
 which works like the interface 
 between the cluster 
