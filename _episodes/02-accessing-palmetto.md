@@ -84,32 +84,8 @@ $
 
 In the figure below, MobaXterm also gives you a GUI browser of your home
 directory on Palmetto. For Mac OS and Linux terminal, you will only have the
-command line interface (CLI) to the right.
+command line interface to the right.
 
 <img src="../fig/mobaxterm_4.png" alt="MobaXterm interface" style="height:350px">
 
 
-## Basic structure of the cluster
-
-<img src="../fig/palmetto-structure.png" alt="Structure of the Palmetto Cluster" style="height:350px">
-
-The Palmetto cluster has several "compute" nodes
-that can perform fast calculations on large amounts of data.
-It also has a few so-called "service" nodes,
-that are *not* meant for this purpose.
-Instead, they are meant to help users perform other actions
-such as transfering code and data to and from the cluster.
-
-The most important of these "service" nodes is
-the login node `user001`.
-The login node runs a "server" program
-that listens for remote logins.
-On our own machines, we run a "client" program
-(Secure Shell or `ssh`) that can talk to this server.
-Our client program passes our login credentials to this server,
-and if we are allowed to log in,
-the server runs a shell for us on the computer
-it is running on (`user0001`).
-Any commands that we enter into this shell
-are executed not by our own machines,
-but by `user0001`.
