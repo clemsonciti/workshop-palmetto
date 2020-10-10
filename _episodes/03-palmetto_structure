@@ -31,6 +31,7 @@ $ cat /etc/hardware-table
 ~~~
 {: .bash}
 
+
 This will print out a text file with the hardware info. Please make sure you type exactly as shown; Linux is case-sensitive space-sensitive, 
 and typo-sensitive. The output will look something like this:
 
