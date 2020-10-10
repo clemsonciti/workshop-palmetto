@@ -14,3 +14,4 @@ keypoints:
 home storage: backed up, 100 gb limit
 checkquota
 scratch storage
+buying storage
