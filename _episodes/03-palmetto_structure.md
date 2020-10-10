@@ -2,10 +2,10 @@
 title: "The structure of the Palmetto Cluster"
 teaching: 15
 exercises: 0
-questions:
-- "How can I access the Palmetto cluster from my local machine?"
 objectives:
-- "Logging into Palmetto from a local Mac / Windows computer."
+- "Compute and login nodes"
+- "Learning about different phases on the cluster"
+- "whatsfree script"
 ---
 
 Basic structure of the cluster:
