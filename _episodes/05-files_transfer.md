@@ -16,6 +16,17 @@ For small file transfers, the Windows users can use the built-in function in Mob
 
 <img src="../fig/mobaxterm_transfer.png" style="height:350px">
 
+### using WinSCP
+
+For more substantial file transfers, you can use an SCP client, such as WinSCP. You can download it [here](https://winscp.net/eng/download.php). It's intuitive and easy to use. Start it, then click on "New Site", and enter the following information:
+
+File protocol: SCP
+Host name: xfer01-ext.palmetto.clemson.edu
+
+You can also specify your Palmetto username and Password. You can click `Save` to save this information. Click on Login, and do the two-factor identification. Note that we connect to Palmetto via `xfer01-ext` rather than `login`. `xfer01-ext` is a special Palmetto node that handles file transfers with computers that are outside of the Palmetto cluster, so it doesn't burden the login node.
+
+If you log in sucessfully, you will see the files on your local machine on the left, and the Palmetto files on the right:
+
 mobaxterm
 winscp
 filezilla
