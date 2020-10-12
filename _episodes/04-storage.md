@@ -4,7 +4,6 @@ questions:
 - "How and where can I store my files?"
 teaching: 15
 exercises: 0
-questions:
 
 objectives:
 - "Use `grep` to select lines from text files that match simple patterns."
