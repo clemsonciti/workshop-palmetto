@@ -15,6 +15,10 @@ Interactive jobs are great if you need to do something quick, or perhaps visuali
 
 If you have some truly serious, multi-hour computation project (and that's what Palmetto is really good for), a better idea is to run it on the background. This is called a *batch job*. You submit it in a fashin which is conceptually similar to an interactive job, but then it runs on the compute node on the background until it's over. If it needs to take two days, it takes two days. You can quit the SSH client or close your laptop, it won't affect the batch job.
 
+To submit a batch job, we usually create a separate file called a *PBS script*. This file tells the scheduler about the resoures we want to request, and then what should be done once we get on a compute node. 
+
+Let us go through an example. We will create a Matlab script, and then create a
+
 
 bigmatrix.m
 bigmatrix.sh
