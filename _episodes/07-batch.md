@@ -28,7 +28,7 @@ nano bigmatrix.m
 
 This will open the `nano` text editor:
 
-<img>
+<img src="../fig/nano_empty.png" style="height:350px">
 
 Inside the editor, type this:
 ~~~
