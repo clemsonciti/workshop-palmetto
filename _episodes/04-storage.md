@@ -1,5 +1,7 @@
 ---
 title: "Storage on Palmetto"
+questions:
+- "How and where can I store my files?"
 teaching: 15
 exercises: 0
 questions:
