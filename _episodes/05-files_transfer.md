@@ -22,6 +22,7 @@ For more substantial file transfers, you can use an SCP client, such as WinSCP. 
 
 - File protocol: SCP
 - Host name: xfer01-ext.palmetto.clemson.edu
+- Port number: 22
 
 You can also specify your Palmetto username and Password. You can click `Save` to save this information. Click on Login, and do the two-factor identification. Note that we connect to Palmetto via `xfer01-ext` rather than `login`. `xfer01-ext` is a special Palmetto node that handles file transfers with computers that are outside of the Palmetto cluster, so it doesn't burden the login node.
 
