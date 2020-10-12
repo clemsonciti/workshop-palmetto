@@ -1,5 +1,7 @@
 ---
 title: "The structure of the Palmetto Cluster"
+questions:
+- "What is the structure of the Palmetto Cluster?"
 teaching: 15
 exercises: 0
 objectives:
