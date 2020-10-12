@@ -3,7 +3,7 @@ title: "Transferring files to and from Palmetto"
 teaching: 15
 exercises: 0
 questions:
-- "How can I access the Palmetto cluster from my local machine?"
+- "How can I transfer data between Palmetto and my local machine?"
 objectives:
 - "Logging into Palmetto from a local Mac / Windows computer."
 ---
