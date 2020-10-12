@@ -133,25 +133,100 @@ If the scheduler receives a request it cannot satisfy, it will complain and not 
 
 It is possible to ask for several compute nodes at a time, for example `select=4` will give you 4 compute nodes. Some programs, such as LAMMPS or NAMD, work a lot faster if you ask for several nodes. This is an advanced topic and we will not discuss it here, but you can find some examples on our website.
 
+It is very important to remember that you shouldn't run computations on the login node, because the login node is shared between everyone who logs into Palmetto, so your computations will interfer with other people's login processes. However, once you are on a compute node, you can run some computations, because each user gets their own CPUs and RAM so there is no interference. If you are on the login node, let's get on the compute node:
 
-whatsfree
-qsub w/o gpu
-qsub w gpu
-interonnect
-select >1 node (MPI)
+~~~
+qsub -I -l select=1:ncpus=4:mem=10gb,walltime=2:00:00
+~~~
+{: .bash}
 
-job id is very helpful for us
+We have a lot of software installed on Palmetto, but most of it is organized into *modules*, which need to be loaded. For example, we have many versions of Matlab isntalled on Palmetto, but if you type
 
-python --version
-matlab --version
+~~~
+matlab
+~~~
+{: .bash}
 
+you will get an error:
+~~~
+-bash: matlab: command not found
+~~~
+{: .error}
+
+In order to use Matlab, as well as most other software installed on Palmetto, you need to load the Matlab module. To see which modules are available on Palmetto, please type
+
+~~~
 module avail
-module load matlab
-matlab --version
+~~~
+{: .bash}
+
+Hit `SPACE` several times to get to the end of the module list. This is a very long list, and you can see that there is a lot of software installed for you. If you want to see which versions of Matlab are installed, you can type
+
+~~~
+module avail matlab
+~~~
+{: .bash}
+
+~~~
+-------------------------------------------------------------- /software/AltModFiles ---------------------------------------------------------------
+   matlab/MUSC2018b    matlab/2018b    matlab/2019b    matlab/2020a (D)
+
+  Where:
+   D:  Default Module
+
+Use "module spider" to find all possible modules and extensions.
+Use "module keyword key1 key2 ..." to search for all possible modules matching any of the "keys".
+~~~
+{: .output}
+
+Let's say you want to use Matlab 2020. To load the module, you will need to specify its full name:
+
+~~~
+module load matlab/2020a
+~~~
+{: .bash}
+
+To see the list of modules currently loaded, you can type
+
+~~~
 module list
-module load r
-module list --> other modules are loaded
-R
-module switch
-module unload
+~~~
+{: .bash}
+
+If the Matlab module was loaded correctly, you should see it in the module list. In order to start command-line Matlab, you can type
+
+~~~
+matlab
+~~~
+{: .bash}
+
+To exit Matlab, please type `exit`. To unload a module, you an use `module unload matlab/2020a` command. To unload all the modules, please type
+
+~~~
 module purge
+~~~
+{: .bash}
+
+Now, if you do `module list`, the list should be empty. Now, let's start R. To see whih versions of R are available, type
+
+~~~
+module avail r
+~~~
+{: .bash}
+
+This will give you a list of all modules which have the letter "r" in them (`module avail` is not very sophisticated). Let's see what happens when you load the R 4.0.2 module:
+
+~~~
+module load r/4.0.2-gcc/8.3.1
+module list
+~~~
+{: .bash}
+
+~~~
+Currently Loaded Modules:
+  1) tcl/8.6.8-gcc/8.3.1   2) openjdk/11.0.2-gcc/8.3.1   3) libxml2/2.9.10-gcc/8.3.1   4) libpng/1.6.37-gcc/8.3.1   5) r/4.0.2-gcc/8.3.1
+~~~
+{: .output}
+
+R depends on other software to eun, so we have configured the R module in a way that when you load it, it automatically loads other modules that it depends on.
+
