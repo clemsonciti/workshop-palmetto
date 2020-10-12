@@ -140,6 +140,8 @@ qsub w gpu
 interonnect
 select >1 node (MPI)
 
+job id is very helpful for us
+
 python --version
 matlab --version
 
