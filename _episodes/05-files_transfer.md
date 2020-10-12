@@ -37,7 +37,7 @@ WinSCP has an interface that is intuitive and easy to use. To upload or download
 
 For Mac and Linux machines, we recommend a program called FileZilla. You can download it [here](https://filezilla-project.org/download.php?platform=osx).
 
-Open, it, then click `Start` --> `Sie Manager`. Enter the following information:
+Open, it, then click `Start` --> `Site Manager`. Enter the following information:
 
 - File protocol: SFTP
 - Host name: xfer01-ext.palmetto.clemson.edu
