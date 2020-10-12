@@ -19,7 +19,80 @@ To submit a batch job, we usually create a separate file called a *PBS script*. 
 
 Let us go through an example. We will use bath mode to compute the first eigenvalue of a large matrix. We will create two scripts: a Matlab script which does the cmputation, and a PBS script which will execute the Matlab script on a compute node in batch mode.
 
-We will create a simple Matlab script which computes the first eigenvalue of a large matrix, and then we will run this Matlab script in bath mode. So we will create tw
+Palmetto has a simple text editor which is called `nano`. It doesn't offer any fancy formatting, but it suffices for ceating and editing simple texts. Let's create the MAtlab script first:
+
+~~~
+nano bigmatrix.m
+~~~
+{: .bash}
+
+This will open the `nano` text editor:
+
+<img>
+
+Inside the editor, type this:
+~~~
+a = randn (5000, 5000);
+[v,d] = eig (a); (
+fprintf ('first eigenvalue = %.5f\n', d(1,1));
+~~~
+Instead of typing, you can copy the text from the Web browser and paste it into `nano`. Windows users can paste with `Shift`+`Ins` (or by right-clicking the mouse). Mac users can paste with `Cmd`+`V`. At the end, your screen should look like this:
+
+<img>
+
+To save it, press `Ctrl`+`O`, and hit enter. To exit the editor, press `Ctrl`+`X`. To make sure the text is saved properly, print it on screen usong the `cat` command:
+
+~~~
+cat bigmatrix.m
+~~~
+{: .bash}
+
+Now, let's create the PBS script:
+
+~~~
+nano bigmatrix.sh
+~~~
+{: .bash}
+
+Inside the `nano` text editor, type this (or paste from the Web browser):
+
+~~~
+#!/bin/bash
+#
+#PBS -N bigmatrix
+#PBS -l select=1:ncpus=10:mem=10gb
+#PBS -l walltime=0:30:00
+#PBS -o output.txt
+#PBS -j oe
+
+module load matlab/2020a
+matlab < bigmatrix.m
+~~~
+
+Let's go through the script, line by line. The first cryptic line says that it's a script that is executed by the Linux shell. The next line is empty, followed by five lines that are the instructions to the scheduler (they start with `#PBS`):
+
+- `-N` speiies the name of the job (could be anything, I called it `bigmatrix` for the sake of consistency)
+- the first `-l` line is the specification of resources: one node, ten CPUs, ten Gb of RAM
+- the second `-l` line is the amount of walltime (thirty minutes);
+- `-o` specifies the name of the output file where the Matlab output will be printed;
+- `-j oe` means "join outout and error", which is, if any errors happen, they will be written into `output.txt`.
+
+The rest is the instructions what to do once we get on the compute node that satisfies the request we provided in `-l`: load the MAtlab module, and execute the Matlab script called bigmatrix.m that we have created. Save the PBS script and exit `nano` (`Ctrl`+`O`, `ENTER`, `Ctrl`+`X`). 
+
+Now, let's submit our batch job!
+
+~~~
+qsub bigmatrix.sh
+~~~
+{: .bash}
+
+We use the same command `qsub` that we have previously used for an interactive job, but now it's much simpler, because all the hard work went into creating the PBS shell script `bigmatrix.sh` and `qsub` reads all the necessary information from there. If the submission was successful, it will give you the job ID, for example:
+
+~~~
+632585.pbs02
+~~~
+{: .output}
+
 
 
 bigmatrix.m
