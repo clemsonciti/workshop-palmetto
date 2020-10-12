@@ -1,5 +1,5 @@
 ---
-title: "Accessing the Palmetto Cluster"
+title: "Transferring files to and from Palmetto"
 teaching: 15
 exercises: 0
 questions:
@@ -7,6 +7,12 @@ questions:
 objectives:
 - "Logging into Palmetto from a local Mac / Windows computer."
 ---
+
+### Windows machines
+
+## using MobaXTerm
+
+For small file transfers, the Windows users can use the built-in function in MobaXTerm
 
 mobaxterm
 winscp
