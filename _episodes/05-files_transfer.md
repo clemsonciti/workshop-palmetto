@@ -45,7 +45,7 @@ Open, it, then click `Start` --> `Sie Manager`. Enter the following information:
 - Logon Type: Interactive
 - User: <your Palmetto username>
 
-<img src="../fig/filezilla_login.png" style="height:350px">
+<img src="../fig/filezilla_screen.png" style="height:350px">
 
 Then click `Connect`. It will ask you for your password. Then, it will do the two-factor identification (select `1` if you want to do DUO, etc). After that, you should see the following screen:
   
