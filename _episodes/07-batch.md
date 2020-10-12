@@ -19,7 +19,7 @@ To submit a batch job, we usually create a separate file called a *PBS script*. 
 
 Let us go through an example. We will use bath mode to compute the first eigenvalue of a large matrix. We will create two scripts: a Matlab script which does the cmputation, and a PBS script which will execute the Matlab script on a compute node in batch mode.
 
-Palmetto has a simple text editor which is called `nano`. It doesn't offer any fancy formatting, but it suffices for ceating and editing simple texts. Let's create the MAtlab script first:
+Palmetto has a simple text editor which is called `nano`. It doesn't offer any fancy formatting, but it suffices for ceating and editing simple texts. Let's create the Matlab script first:
 
 ~~~
 nano bigmatrix.m
@@ -38,8 +38,7 @@ fprintf ('first eigenvalue = %.5f\n', d(1,1));
 ~~~
 Instead of typing, you can copy the text from the Web browser and paste it into `nano`. Windows users can paste with `Shift`+`Ins` (or by right-clicking the mouse). Mac users can paste with `Cmd`+`V`. At the end, your screen should look like this:
 
-![nano_empty_screen](../fig/nano_empty.png)
-
+<img src="../fig/nano_matlab.png" style="height:350px">
 
 To save it, press `Ctrl`+`O`, and hit enter. To exit the editor, press `Ctrl`+`X`. To make sure the text is saved properly, print it on screen usong the `cat` command:
 
