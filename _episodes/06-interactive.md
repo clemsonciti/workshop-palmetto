@@ -3,7 +3,7 @@ title: "Running an interactive job on Palmetto"
 teaching: 15
 exercises: 0
 questions:
-- "How can I find things in files?"
+- "How do I request and interact with a compute node?"
 objectives:
 - "Use `grep` to select lines from text files that match simple patterns."
 keypoints:
