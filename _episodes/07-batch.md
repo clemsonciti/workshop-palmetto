@@ -3,7 +3,7 @@ title: "Running a batch job"
 teaching: 15
 exercises: 0
 questions:
-- "How can I find things in files?"
+- "How do I run my computations on a compute node on the background?"
 objectives:
 - "Use `grep` to select lines from text files that match simple patterns."
 keypoints:
