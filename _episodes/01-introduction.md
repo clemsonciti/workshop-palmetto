@@ -11,7 +11,7 @@ Palmetto is a *supercomputing cluster*: a set of powerful computers that are con
 
 Currently, the Palmetto cluster is ranked at #392 in the list of the world's most powerful computers (#9 among the United States' universities). 
 
-The Palmetto cluster is maintained by two teams: a team of system administrators, who works directly at the cluster, and monitors its hardware and operating system, and a team of *research facilitators*, who work with the Palmetto users. The two teams work very closely together. 
+The Palmetto cluster is maintained by two teams: a team of *system administrators*, who work directly at the cluster, and monitors its hardware and operating system, and a team of *research facilitators*, who work with the Palmetto users. The two teams work very closely together. 
 
 <img src="../fig/citi_flyer.png" style="height:450px">
 
