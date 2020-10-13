@@ -5,9 +5,7 @@ questions:
 teaching: 15
 exercises: 0
 objectives:
-- "Compute and login nodes"
-- "Learning about different phases on the cluster"
-- "whatsfree script"
+- compute and login nodes, hardware table, `whatsfree`
 keypoints:
 - "Palmetto contains more than 2000 interconnected compute nodes"
 - "A phase is a group of compute nodes that have the same architecture (CPUs, RAM, GPUs)"
