@@ -5,10 +5,11 @@ exercises: 0
 questions:
 - "How do I request and interact with a compute node?"
 objectives:
-- "Use `grep` to select lines from text files that match simple patterns."
 keypoints:
-- "`grep` selects lines in files that match patterns."
-- "`--help` is a flag supported by many bash commands, and programs that can be run from within Bash, to display more information on how to use these commands or programs."
+- "`whatsfree` shows the current Palmetto usage"
+- `qsub` sends a request for a compute node to the scheduler
+- "Software available on Palmetto is organized into modules according to version"
+- "Modules need to be loaded before use"
 ---
 
 Now, we arrive at the most important part of today's workshop: getting on the compute nodes. Compute nodes are the real power of Palmetto. Let's see which of the compute nodes are availabe at the moment:
@@ -18,7 +19,7 @@ whatsfree
 ~~~
 {: .bash}
 
-We can see that the cluster is quite busy, but there is a fair amount of ompute nodes that are available for us. Now, let's request one compute node. Please type the following (or paste from the website into your SSH terminal):
+We can see that the cluster is quite busy, but there is a fair amount of compute nodes that are available for us. Now, let's request one compute node. Please type the following (or paste from the website into your SSH terminal):
 
 ~~~
 qsub -I -l select=1:ncpus=4:mem=10gb,walltime=2:00:00
@@ -50,7 +51,7 @@ qsub: job 631266.pbs02 ready
 ~~~
 {: .output}
 
-Please note two inportant things. First, our prompt changes from `login001` no `nodeXXXX`, where `XXXX` is some four-digit number. This is the number of the node that we got. The second one is the job ID, which is 631120. We can see the information about the compute node by using the `pbsnodes` command:
+Please note two inportant things. First, our prompt changes from `login001` no `nodeXXXX`, where `XXXX` is some four-digit number. This is the number of the node that we got (in our case, 0193). The second one is the job ID, which is 631266. We can see the information about the compute node by using the `pbsnodes` command:
 
 ~~~
 pbsnodes node0193
@@ -105,7 +106,7 @@ node0102
 ~~~
 {: .output}
 
-You can see that the node has 8 CPUs, no GPUs, belongs to phase 1a, and at the moment runs 8 jobs. One of these jobs is mine. When I submitted `qsub` request, the scheduler told me that my job ID is XXXXX. The `pbsnodes` command gives us the list of jobs that are currently running on the compute node, and, happily, I see my job on that list. It apears four times, because I have requested four CPUs.
+You can see that the node has 8 CPUs, no GPUs, belongs to phase 1a, and at the moment runs 8 jobs. One of these jobs is mine. When I submitted `qsub` request, the scheduler told me that my job ID is 631120. The `pbsnodes` command gives us the list of jobs that are currently running on the compute node, and, happily, I see my job on that list. It appears four times, because I have requested four CPUs.
 
 To exit the compute node, type:
 
