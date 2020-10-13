@@ -81,6 +81,8 @@ Let's go through the script, line by line. The first cryptic line says that it's
 
 The rest is the instructions what to do once we get on the compute node that satisfies the request we provided in `-l`: load the MAtlab module, and execute the Matlab script called bigmatrix.m that we have created. Save the PBS script and exit `nano` (`Ctrl`+`O`, `ENTER`, `Ctrl`+`X`). 
 
+A very common question is how much walltime we sould ask for. It's a tricky question beause there is no way of knowing how much time you will need until you actually try it. My rule of thumb is: make a rough guess, and ask for twice as much. The `bigmatrix.m` script takes at most 15 minutes (usually it runs under five minutes), so I ask for half an hour.
+
 Now, let's submit our batch job!
 
 ~~~
