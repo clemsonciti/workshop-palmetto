@@ -4,6 +4,10 @@ teaching: 15
 exercises: 0
 questions:
 - "How can I access the Palmetto cluster from my local machine?"
+keypoints:
+- "Palmetto can be accessed by an SSh (secure shell) client"
+- "Windows user can use `MobaXTerm` application"
+- "Mac users can use the `Terminal` application"
 ---
 
 To be able to run commands on the Palmetto from your own machine,
@@ -16,6 +20,8 @@ For Mac OS X, you can open the Terminal Application (whih is usually losated in 
 $ ssh login.palmetto.clemson.edu
 ~~~
 {: .bash}
+
+Pametto is accessed using the SSH (["Secure shell"](https://en.wikipedia.org/wiki/Ssh_(Secure_Shell))) protocol. Palmetto runs the *SSH server*; on your local machine, you will need to run *SSH client* which connects to a server using a command-line *terminal*. The commands that are entered on the terminal are processed by the server on Palmetto.
 
 For Windows, first you need to download and install
 [MobaXterm Home Edition](https://mobaxterm.mobatek.net/download.html).
