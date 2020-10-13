@@ -5,7 +5,7 @@ questions:
 teaching: 15
 exercises: 0
 keypoints:
-- "Palmetto is a very powerful high-performance computing cluster."
+- "Palmetto is a very powerful high-performance computing cluster"
 ---
 Palmetto is a *supercomputing cluster*: a set of powerful computers that are connected to each other. It is built and maintained by Clemson University, and is located off campus, close to Anderson SC, in a dedicated building which is powered by a dedicated power plant. 
 
@@ -13,7 +13,7 @@ Palmetto is a *supercomputing cluster*: a set of powerful computers that are con
 
 Currently, the Palmetto cluster is ranked at #392 in the list of the world's most powerful computers (#9 among the United States' universities). 
 
-The Palmetto cluster is maintained by two teams: a team of *system administrators*, who work directly at the cluster, and monitors its hardware and operating system, and a team of *research facilitators*, who work with the Palmetto users. The two teams work very closely together. 
+The Palmetto cluster is maintained by two teams: a team of *system administrators*, who work directly at the cluster, and monitors its hardware and operating system, and a team of *research facilitators*, who work with the Palmetto users. The two teams work very closely together. As research facilitators, we provide training workshops, online help and support, and in-person office hours (which are currently on Zoom).
 
 <img src="../fig/citi_flyer.png" style="height:450px">
 
