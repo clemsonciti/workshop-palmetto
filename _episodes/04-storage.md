@@ -7,8 +7,8 @@ exercises: 0
 objectives:
 - home directory, scratch space
 keypoints:
-- "Users get 100 Gb of backed-up storage in their home directories
-- "They also have access to more than 2 Pb of scratch storage
+- "Users get 100 Gb of backed-up storage in their home directories"
+- "They also have access to more than 2 Pb of scratch storage"
 - "Scratch storage is not baked up, and files left unused for 1 month are deleted"
 ---
 
@@ -37,7 +37,7 @@ pwd
 ~~~
 {: .output}
 
-100 Gb might be enough for some, but for people dealing with extensive amounts of data that would not be enough. We also offer the access to *scratch space*, which is about 2.5 Petabytes in total. Scratch space is not backed up; files that haven't been used for more than a month are automatically deleted (and cannot be restored). We strongly encourage people to use scratch space, but please be aware of its temporary nature. When you get anything that is worth keeping, please back it up, either in your home directory, or on your local machine.
+100 Gb might be enough for some, but for people dealing with extensive amounts of data that would not be enough. We also offer the access to *scratch space*, which is about 2++ Petabytes in total. Scratch space is not backed up; files that haven't been used for more than a month are automatically deleted (and cannot be restored). We strongly encourage people to use scratch space, but please be aware of its temporary nature. When you get anything that is worth keeping, please back it up, either in your home directory, or on your local machine.
 
 Scratch space is divided into two directories: `scratch1` (1.88 Petabytes) and `scratch2` (188 Terabytes). `scratch1` uses a faster system for more rapid file transfer, and is well suited for jobs with thousands of read/write requests. `scratch2` is better suited for read/write jobs that are performed in parallel.
 
