@@ -9,8 +9,8 @@ objectives:
 keypoints:
 - "`whatsfree` shows the current Palmetto usage"
 - "`qsub` sends a request for a compute node to the scheduler"
-- "Software available on Palmetto is organized into modules according to version"
-- "Modules need to be loaded before use"
+- "software available on Palmetto is organized into modules according to version"
+- "modules need to be loaded before use"
 ---
 
 Now, we arrive at the most important part of today's workshop: getting on the compute nodes. Compute nodes are the real power of Palmetto. Let's see which of the compute nodes are availabe at the moment:
