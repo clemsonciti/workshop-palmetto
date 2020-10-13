@@ -7,9 +7,9 @@ exercises: 0
 objectives:
 - home directory, scratch space
 keypoints:
-- "Users get 100 Gb of backed-up storage in their home directories"
-- "They also have access to more than 2 Pb of scratch storage"
-- "Scratch storage is not baked up, and files left unused for 1 month are deleted"
+- "users get 100 Gb of backed-up storage in their home directories"
+- "they also have access to more than 2 Pb of scratch storage"
+- "scratch storage is not backed up, and files left unused for 1 month are deleted"
 ---
 
 Every Palmetto user gets 100 Gb of storage space; this storage is backed up at the end of every day, and the backup is kept for 42 days. So if you accidentally delete a file that was reated more than a day ago, we might be able to restore it. This storage is called *home directory*.
