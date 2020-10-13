@@ -5,6 +5,7 @@ exercises: 0
 questions:
 - "How do I request and interact with a compute node?"
 objectives:
+- `qsub`, `pbsnodes`, modules
 keypoints:
 - "`whatsfree` shows the current Palmetto usage"
 - "`qsub` sends a request for a compute node to the scheduler"
