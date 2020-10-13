@@ -93,10 +93,59 @@ We use the same command `qsub` that we have previously used for an interactive j
 ~~~
 {: .output}
 
+We can monitor the job's progress with the `qstat` command. This is an example to list all jobs that are currently executed by you:
+
+~~~
+qstat -u <your Palmetto username>
+~~~
+{: .bash}
+
+You should see something like this:
+
+~~~
+pbs02:
+                                                            Req'd  Req'd   Elap
+Job ID          Username Queue    Jobname    SessID NDS TSK Memory Time  S Time
+--------------- -------- -------- ---------- ------ --- --- ------ ----- - -----
+632585.pbs02    gyourga  c1_sing* bigmatrix  24385*   1  10   10gb 00:30 R 00:00
+~~~
+{: .output}
+
+You see the job ID, your Palmetto username, the name of the queue (nore on that later), the name of the job (`bigmatrix`), the resources requested (1 node, 10 CPUs, 10 gb of RAM, half an hour of walltime). The letter `R` means that the job is running (`Q` means "queued", and `F` means "finished"), and then it shows for how long it's been running (it basically just started).
+
+Wait a little bit and do `qstat` again (you can hit the `UP` arrow to show the previous command). `Elap time` should now be a bit longer. The sript should take five minutes or so to execute. If you enter `qstat -u <your Palmetto username>` and the list is empty, then congratulations, we are done!
+
+If everything went well, you should now see the file `output.txt`. Let's print it on screen:
+
+~~~
+cat output.txt
+~~~
+{: .bash}
+
+~~~
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2020 The MathWorks, Inc.
+              R2020a Update 1 (9.8.0.1359463) 64-bit (glnxa64)
+                               April 9, 2020
 
 
-bigmatrix.m
-bigmatrix.sh
-qsub bigmatrix.sh
-qstat -u username
-qstat -f job_id
+To get started, type doc.
+For product information, visit www.mathworks.com.
+
+>> >> >> first eigenvalue = -64.79945
+~~~
+{: .output}
+
+Your first eigenvalue might be different because it's a random matrix.
+
+Another way to use `qstat` is to list the information about a particular job. Here, instead of `-u`, we use the `-xf` option, followed by the Job ID:
+
+~~~
+qstat -xf 632585
+~~~
+{: .bash}
+
+This will give you a lot of indormation about the jib, which is really useful for debugging. If you have a problem and you need our help, it is very helpful to us if you provide the job ID so we can do `qstat -xf` on it and get the job details.
+
