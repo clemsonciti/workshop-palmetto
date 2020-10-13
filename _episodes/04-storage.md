@@ -4,8 +4,8 @@ questions:
 - "How and where can I store my files?"
 teaching: 15
 exercises: 0
-
 objectives:
+- home directory, scratch space
 keypoints:
 - "Users get 100 Gb of backed-up storage in their home directories
 - "They also have access to more than 2 Pb of scratch storage
