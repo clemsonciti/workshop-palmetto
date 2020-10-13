@@ -5,6 +5,7 @@ exercises: 0
 questions:
 - "How can I transfer data between Palmetto and my local machine?"
 objectives:
+ - WinSCP, FileZilla
 keypoints:
 - Windows users can use WinSCP for file transfer
 - Mac users can use FileZilla
