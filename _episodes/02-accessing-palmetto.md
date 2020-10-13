@@ -4,6 +4,8 @@ teaching: 15
 exercises: 0
 questions:
 - "How can I access the Palmetto cluster from my local machine?"
+objectives:
+- SSH client, Terminal, MobaXTerm
 keypoints:
 - "Palmetto can be accessed by an SSh (secure shell) client"
 - "Windows user can use `MobaXTerm` application"
