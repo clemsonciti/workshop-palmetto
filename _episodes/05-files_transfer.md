@@ -56,12 +56,10 @@ Then click `Connect`. It will ask you for your password. Then, it will do the tw
   
 The interface is very similar to WinSCP: the left part of the screen shows the files on your local machine, and the right part shows the files on Palmetto. Navigation between folders is the same (double click on the folder to enter it, click on `..` to exit the folder). You can also specify the direct path (currently, it's pointing to my home directory on Palmetto: `/home/gyourga`). Also, to my knowledge, `Quickconnect` option on the top of the window doesn't work on Palmetto because it cannot handle two-factor identification that Palmetto uses. 
 
-Another option for advanced Mac and Linux users is to use the `scp` command from the terminal. It is documented on our website:
-https://www.palmetto.clemson.edu/palmetto/basic/started/#direct-transfer
+Another option for advanced Mac and Linux users is to use the `scp` command from the terminal. It is [documented on our website]
+(https://www.palmetto.clemson.edu/palmetto/basic/started/#direct-transfer).
 
 ### transferring large amounts of data
 
-If yu need to transfer several gigabytes of data, and you find WinSCP / FileZilla too slow, you can use Globus. The interface is not as intuitive, but the file transfer speeds are much higher. The guide to using Globus is on our website:
-
-https://www.palmetto.clemson.edu/palmetto/basic/started/#transfer-large-files-using-globus
+If you need to transfer several gigabytes of data, and you find WinSCP / FileZilla too slow, you can use Globus. The interface is not as intuitive, but the file transfer speeds are much higher. [The guide to using Globus is on our website](https://www.palmetto.clemson.edu/palmetto/basic/started/#transfer-large-files-using-globus).
 
