@@ -6,19 +6,11 @@ questions:
 - "How can I access the Palmetto cluster from my local machine?"
 ---
 
-In this workshop,
-we will use a command-line interface to interact with
-the Palmetto cluster, which runs the Linux operating system
-specifically, [CentOS](https://www.centos.org/).
-However, note that these commands can be used on
-any *Unix-based* operating system,
-including Mac OS X.
-
 To be able to run commands on the Palmetto from your own machine,
 you will first need to be able to log in to the Palmetto.
 This is known as a *remote login*.
 
-For Mac OS X, you can open the Terminal Application and run the following:
+For Mac OS X, you can open the Terminal Application (whih is usually losated in `Applications` &rarr; `Utilities`) and run the following:
 
 ~~~
 $ ssh login.palmetto.clemson.edu
@@ -52,10 +44,6 @@ and password, then DUO option.
 
 <img src="../fig/mobaxterm_2.png" alt="Login interface" style="height:350px">
 
-> For MobaXterm, please select No when asked if you want to save your password.
-> <img src="../fig/mobaxterm_3.png" alt="Password saving selection" style="height:350px">
-{: .callout}
-
 When logged in,
 you are presented with a welcome message
 and the following "prompt":
@@ -66,7 +54,7 @@ and the following "prompt":
 {: .bash}
 
 The prompt in a bash shell usually
-consists of a dollar (`$`) sign,
+contains a (`$`) sign,
 and shows that the shell is waiting for input.
 The prompt may also contain other information:
 this prompt tells you `your username` and which node
@@ -75,17 +63,9 @@ you are connected to -
 It also tells you your current directory,
 i.e., `~`, which, as you will learn shortly,
 is short for your *home* directory.
-We will mostly refer to the prompt as just `$`, i.e.,
-
-~~~
-$
-~~~
-{: .bash}
 
 In the figure below, MobaXterm also gives you a GUI browser of your home
 directory on Palmetto. For Mac OS and Linux terminal, you will only have the
 command line interface to the right.
 
 <img src="../fig/mobaxterm_4.png" alt="MobaXterm interface" style="height:350px">
-
-
