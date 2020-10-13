@@ -8,8 +8,8 @@ objectives:
 - compute and login nodes, hardware table, `whatsfree`
 keypoints:
 - "Palmetto contains more than 2000 interconnected compute nodes"
-- "A phase is a group of compute nodes that have the same architecture (CPUs, RAM, GPUs)"
-- "A specialized login node runs the SSH server"
+- "a phase is a group of compute nodes that have the same architecture (CPUs, RAM, GPUs)"
+- "a specialized login node runs the SSH server"
 ---
 
 The computers that make up the Palmetto cluster are called *nodes*. Most of the nodes on Palmetto are *compute nodes*, 
