@@ -7,7 +7,7 @@ questions:
 objectives:
 keypoints:
 - "`whatsfree` shows the current Palmetto usage"
-- `qsub` sends a request for a compute node to the scheduler
+- "`qsub` sends a request for a compute node to the scheduler"
 - "Software available on Palmetto is organized into modules according to version"
 - "Modules need to be loaded before use"
 ---
