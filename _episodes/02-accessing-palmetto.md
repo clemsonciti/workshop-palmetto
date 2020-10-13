@@ -10,18 +10,14 @@ keypoints:
 - "Mac users can use the `Terminal` application"
 ---
 
-To be able to run commands on the Palmetto from your own machine,
-you will first need to be able to log in to the Palmetto.
-This is known as a *remote login*.
+Pametto is accessed using the SSH (["Secure shell"](https://en.wikipedia.org/wiki/Ssh_(Secure_Shell))) protocol. Palmetto runs the *SSH server*; on your local machine, you will need to run *SSH client* which connects to a server using a command-line *terminal*. The commands that are entered on the terminal are processed by the server on Palmetto.
 
-For Mac OS X, you can open the Terminal Application (whih is usually losated in `Applications` &rarr; `Utilities`) and run the following:
+To start the SSH client on a Mac, you can open the Terminal Application (whih is usually losated in `Applications` &rarr; `Utilities`) and run the following:
 
 ~~~
-$ ssh login.palmetto.clemson.edu
+ssh login.palmetto.clemson.edu
 ~~~
 {: .bash}
-
-Pametto is accessed using the SSH (["Secure shell"](https://en.wikipedia.org/wiki/Ssh_(Secure_Shell))) protocol. Palmetto runs the *SSH server*; on your local machine, you will need to run *SSH client* which connects to a server using a command-line *terminal*. The commands that are entered on the terminal are processed by the server on Palmetto.
 
 For Windows, first you need to download and install
 [MobaXterm Home Edition](https://mobaxterm.mobatek.net/download.html).
