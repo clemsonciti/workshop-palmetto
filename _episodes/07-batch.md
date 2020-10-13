@@ -5,7 +5,7 @@ exercises: 0
 questions:
 - "How do I run my computations on a compute node on the background?"
 objectives:
-- PBS scripts, qstat, checkqueuecfg, nano
+- PBS scripts, `qstat`, `checkqueuecfg`, `nano`
 keypoints:
 - "batch jobs don't require interaction with the user and run on the compute nodes on the background"
 - "to submit a batch job, users need to provide a PBS script which is passed to the scheduler"
