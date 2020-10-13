@@ -1,7 +1,5 @@
 ---
 title: "Introduction"
-teaching: 0
-exercises: 0
 questions:
 - "What is Palmetto?"
 
