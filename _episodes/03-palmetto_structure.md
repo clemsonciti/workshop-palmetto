@@ -10,10 +10,6 @@ objectives:
 - "whatsfree script"
 ---
 
-Basic structure of the cluster:
-
-<img src="../fig/palmetto-structure.png" alt="Structure of the Palmetto Cluster" style="height:350px">
-
 The computers that make up the Palmetto cluster are called *nodes*. Most of the nodes on Palmetto are *compute nodes*, 
 that can perform fast calculations on large amounts of data. There is also a special node called the *login node*; it runs the server, 
 which works like the interface 
@@ -22,14 +18,16 @@ and the outside world. The people with Palmetto accounts can log into the server
 Our client program passes our login credentials to this server, and if we are allowed to log in, the server runs a shell for us. 
 Any commands that we enter into this shell are executed not by our own machines, but by the login node.
 
+<img src="../fig/palmetto-structure.png" alt="Structure of the Palmetto Cluster" style="height:350px">
+
 Another special node is the *scheduler*; Palmetto users can get from the
 login node to the compute nodes by submitting a request to the scheduler, and the scheduler will assign them to the most appropriate compute node.
-Palmetto also has a few so-called "service" nodes, which serve special purposes like transfering code and data to and from the cluster, and hsting web applications.
+Palmetto also has a few so-called "service" nodes, which serve special purposes like transfering code and data to and from the cluster, and hosting web applications.
 
 To see the hardware specifications of the compute nodes, please type
 
 ~~~
-$ cat /etc/hardware-table
+cat /etc/hardware-table
 ~~~
 {: .bash}
 
@@ -38,8 +36,6 @@ This will print out a text file with the hardware info. Please make sure you typ
 and typo-sensitive. The output will look something like this:
 
 ~~~
-[gyourga@login001 ~]$ cat /etc/hardware-table
-
 PALMETTO HARDWARE TABLE      Last updated:  Jun 15 2020
 
 PHASE COUNT  MAKE   MODEL    CHIP(0)                CORES  RAM(1)    /local_scratch   Interconnect     GPUs  SSD
@@ -110,15 +106,13 @@ CPUs and at least 15 Gb of RAM. Nodes in phases 7 and up are connected with *Inf
 To see which nodes are available at the moment, you can type 
 
 ~~~
-$ whatsfree
+whatsfree
 ~~~
 {: .bash}
 
 You will see something like this:
 
 ~~~
-[gyourga@login001 ~]$ whatsfree
-
 Mon Aug 03 2020 22:37:26
 
 TOTAL NODES: 2102     NODES FREE: 2035     NODES OFFLINE: 14     NODES RESERVED: 0
@@ -160,5 +154,5 @@ PHASE 20   TOTAL =  22  FREE =  22  OFFLINE =   0  TYPE = Dell   R740    Intel X
  NOTE: Your job will land on the oldest phase that satisfies your PBS resource requests.
 ~~~
 
-This table shows the amount of *completely free* nodes per each phase; a node which has, for example, 8 cores, but only 4 of them are used, would not be counted as "free". So this table is a conservative estimate. Note that there are a lot more free nodes in the 1g phases, compared to the InfiniBand phases. It is a good idea t run `whatsfree` when you log into Palmetto, to get a picture of how busy the cluster is. This piture can change pretty drastically depending on the time of the day and the day of the week.
+This table shows the amount of *completely free* nodes per each phase; a node which has, for example, 8 cores, but only 4 of them are used, would not be counted as "free". So this table is a conservative estimate. Note that there are a lot more free nodes in the 1g phases, compared to the InfiniBand phases. It is a good idea to run `whatsfree` when you log into Palmetto, to get a picture of how busy the cluster is. This picture can change pretty drastically depending on the time of the day and the day of the week.
 
