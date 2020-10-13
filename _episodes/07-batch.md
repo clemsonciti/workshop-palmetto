@@ -5,10 +5,12 @@ exercises: 0
 questions:
 - "How do I run my computations on a compute node on the background?"
 objectives:
-- "Use `grep` to select lines from text files that match simple patterns."
+- PBS scripts, qstat, checkqueuecfg, nano
 keypoints:
-- "`grep` selects lines in files that match patterns."
-- "`--help` is a flag supported by many bash commands, and programs that can be run from within Bash, to display more information on how to use these commands or programs."
+- "batch jobs don't require interaction with the user and run on the compute nodes on the background"
+- "to submit a batch job, users need to provide a PBS script which is passed to the scheduler"
+- "jobs are assigned to queues, according to the amount of requested resources"
+- "different queues have different limits on the walltime and the number of parallel jobs"
 ---
 
 Interactive jobs are great if you need to do something quick, or perhaps visualize some data. If you have some code which runs for seven hours, interactive jobs are not a great idea. Please keep in mind that an interactive job gets killed if you close the SSH connetion. So for example, you connect to Palmetto from your laptop, start an interactive job, but then your laptop runs out of battery power and you can't find your charger. SSH client quits, and your interactive job is killed. 
