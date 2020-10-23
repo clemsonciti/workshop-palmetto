@@ -70,6 +70,6 @@ cd
 ~~~
 {: .bash}
 
-Here, I will not go into details about Linux commands. Some of you have taken our Linux workshop. There are many online tutorials, my favourite is [this one.] (http://linuxcommand.org/lc3_learning_the_shell.php) Please spend some time getting familiar with going between the directories, as well as with copying, moving, and deleting files.
+Here, I will not go into details about Linux commands. Some of you have taken our Linux workshop. There are many online tutorials, my favourite is [this one.](http://linuxcommand.org/lc3_learning_the_shell.php) Please spend some time getting familiar with going between the directories, as well as with copying, moving, and deleting files.
 
 We offer storage space on Palmetto for sale, with the price of $150 per 1 terabyte. This storage is backed up just like your home directory.
