@@ -12,7 +12,7 @@ keypoints:
 - "scratch storage is not backed up, and files left unused for 1 month are deleted"
 ---
 
-Every Palmetto user gets 100 Gb of storage space; this storage is backed up at the end of every day, and the backup is kept for 42 days. So if you accidentally delete a file that was reated more than a day ago, we might be able to restore it. This storage is called *home directory*.
+Every Palmetto user gets 100 Gb of storage space; this storage is backed up at the end of every day, and the backup is kept for 42 days. So if you accidentally delete a file that was created more than a day ago, we might be able to restore it. This storage is called *home directory*.
 
 To see how much space you have left in your home directory, please type:
 
@@ -41,7 +41,7 @@ pwd
 
 Scratch space is divided into two directories: `scratch1` (1.88 Petabytes) and `scratch2` (188 Terabytes). `scratch1` uses a faster system for more rapid file transfer, and is well suited for jobs with thousands of read/write requests. `scratch2` is better suited for read/write jobs that are performed in parallel.
 
-To go to a scratch directory, or to any diretory on Palmetto, use the `cd` ("change directory") command:
+To go to a scratch directory, or to any directory on Palmetto, use the `cd` ("change directory") command:
 
 ~~~
 cd /scratch1/<your Palmetto username>
