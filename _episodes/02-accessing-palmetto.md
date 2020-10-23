@@ -14,7 +14,7 @@ keypoints:
 
 Pametto is accessed using the SSH (["Secure shell"](https://en.wikipedia.org/wiki/Ssh_(Secure_Shell))) protocol. Palmetto runs the *SSH server*; on your local machine, you will need to run *SSH client* which connects to a server using a command-line *terminal*. The commands that are entered on the terminal are processed by the server on Palmetto.
 
-To start the SSH client on a Mac, you can open the Terminal Application (whih is usually losated in `Applications` &rarr; `Utilities`) and run the following:
+To start the SSH client on a Mac, you can open the Terminal Application (which is usually located in `Applications` &rarr; `Utilities`) and run the following:
 
 ~~~
 ssh login.palmetto.clemson.edu
@@ -27,7 +27,7 @@ For Windows, first you need to download and install
 > It is important that you unzip the downloaded installer prior to installation.
 > The zipped installer file contains an additional data file besides the installer
 > executable. This data file is not accessible if the installer executable is
-> called from insize the zipped file (something Windows allows you to do).
+> called from inside the zipped file (something Windows allows you to do).
 {: .callout}
 
 After MobaXterm starts, click the `Session` button.
