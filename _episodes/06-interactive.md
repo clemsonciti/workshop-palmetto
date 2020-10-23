@@ -13,7 +13,7 @@ keypoints:
 - "modules need to be loaded before use"
 ---
 
-Now, we arrive at the most important part of today's workshop: getting on the compute nodes. Compute nodes are the real power of Palmetto. Let's see which of the compute nodes are availabe at the moment:
+Now, we arrive at the most important part of today's workshop: getting on the compute nodes. Compute nodes are the real power of Palmetto. Let's see which of the compute nodes are available at the moment:
 
 ~~~
 whatsfree
@@ -27,7 +27,7 @@ qsub -I -l select=1:ncpus=4:mem=10gb,walltime=2:00:00
 ~~~
 {: .bash}
 
-It is very important not to make typos, use spaces and upper/lowerases exactly as shown, and use the proper punctuation (note the `:` between `ncpus` and `mem`, and the `,` before walltime). If you make a mistake, nothing wrong will happen, but the scheduler won't understand your request.
+It is very important not to make typos, use spaces and upper/lowercases exactly as shown, and use the proper punctuation (note the `:` between `ncpus` and `mem`, and the `,` before walltime). If you make a mistake, nothing wrong will happen, but the scheduler won't understand your request.
 
 Now, let's carefully go through the request:
 
@@ -52,7 +52,7 @@ qsub: job 631266.pbs02 ready
 ~~~
 {: .output}
 
-Please note two inportant things. First, our prompt changes from `login001` no `nodeXXXX`, where `XXXX` is some four-digit number. This is the number of the node that we got (in our case, 0193). The second one is the job ID, which is 631266. We can see the information about the compute node by using the `pbsnodes` command:
+Please note two important things. First, our prompt changes from `login001` no `nodeXXXX`, where `XXXX` is some four-digit number. This is the number of the node that we got (in our case, 0193). The second one is the job ID, which is 631266. We can see the information about the compute node by using the `pbsnodes` command:
 
 ~~~
 pbsnodes node0193
@@ -118,14 +118,14 @@ exit
 
 This will bring you back to the login node. See how your prompt has changed to `login001`. It is important to notice that you have to be on a login node to request a compute node. One you are on the compute node, and you want to go to another compute node, you have to exit first.
 
-For some jobs, you might want to get a GPU, or perhaps two GPUs. For suh requests, the qsub command needs to specify the number of GPUs (one or two) and the type of GPUs (which you can get from `cat /etc/hardware-table`). For example: 
+For some jobs, you might want to get a GPU, or perhaps two GPUs. For such requests, the `qsub` command needs to specify the number of GPUs (one or two) and the type of GPUs (which you can get from `cat /etc/hardware-table`). For example: 
 
 ~~~
 qsub -I -l select=1:ncpus=4:mem=10gb:ngpus=1:gpu_model=k40,walltime=2:00:00
 ~~~
 {: .bash}
 
-Another useful `qsub` option is `interconnect`. Interconnect is the way hpw the nodes are connected to each other. Remember that we have 1g Ethernet nodes and Infiniband nodes. Infinibans nodes may use FDR or HDR type of interonnect. You can specify the interconnect type, for example:
+Another useful `qsub` option is `interconnect`. Interconnect is the way how the nodes are connected to each other. Remember that we have 1g Ethernet nodes and Infiniband nodes. Infinibans nodes may use FDR or HDR type of interonnect. You can specify the interconnect type, for example:
 
 - `qsub -I -l select=1:ncpus=4:mem=10gb:interconnect=1g,walltime=2:00:00`
 - `qsub -I -l select=1:ncpus=4:mem=10gb:interconnect=FDR,walltime=2:00:00`
@@ -135,14 +135,14 @@ If the scheduler receives a request it cannot satisfy, it will complain and not 
 
 It is possible to ask for several compute nodes at a time, for example `select=4` will give you 4 compute nodes. Some programs, such as LAMMPS or NAMD, work a lot faster if you ask for several nodes. This is an advanced topic and we will not discuss it here, but you can find some examples on our website.
 
-It is very important to remember that you shouldn't run computations on the login node, because the login node is shared between everyone who logs into Palmetto, so your computations will interfer with other people's login processes. However, once you are on a compute node, you can run some computations, because each user gets their own CPUs and RAM so there is no interference. If you are on the login node, let's get on the compute node:
+It is very important to remember that you shouldn't run computations on the login node, because the login node is shared between everyone who logs into Palmetto, so your computations will interfere with other people's login processes. However, once you are on a compute node, you can run some computations, because each user gets their own CPUs and RAM so there is no interference. If you are on the login node, let's get on the compute node:
 
 ~~~
 qsub -I -l select=1:ncpus=4:mem=10gb,walltime=2:00:00
 ~~~
 {: .bash}
 
-We have a lot of software installed on Palmetto, but most of it is organized into *modules*, which need to be loaded. For example, we have many versions of Matlab isntalled on Palmetto, but if you type
+We have a lot of software installed on Palmetto, but most of it is organized into *modules*, which need to be loaded. For example, we have many versions of Matlab installed on Palmetto, but if you type
 
 ~~~
 matlab
@@ -209,7 +209,7 @@ module purge
 ~~~
 {: .bash}
 
-Now, if you do `module list`, the list should be empty. Now, let's start R. To see whih versions of R are available, type
+Now, if you do `module list`, the list should be empty. Now, let's start R. To see which versions of R are available, type
 
 ~~~
 module avail r
@@ -230,5 +230,5 @@ Currently Loaded Modules:
 ~~~
 {: .output}
 
-R depends on other software to eun, so we have configured the R module in a way that when you load it, it automatically loads other modules that it depends on.
+R depends on other software to run, so we have configured the R module in a way that when you load it, it automatically loads other modules that it depends on.
 
