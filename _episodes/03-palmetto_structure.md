@@ -24,7 +24,7 @@ Any commands that we enter into this shell are executed not by our own machines,
 
 Another special node is the *scheduler*; Palmetto users can get from the
 login node to the compute nodes by submitting a request to the scheduler, and the scheduler will assign them to the most appropriate compute node.
-Palmetto also has a few so-called "service" nodes, which serve special purposes like transfering code and data to and from the cluster, and hosting web applications.
+Palmetto also has a few so-called "service" nodes, which serve special purposes like transferring code and data to and from the cluster, and hosting web applications.
 
 To see the hardware specifications of the compute nodes, please type
 
