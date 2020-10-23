@@ -31,7 +31,7 @@ You can also specify your Palmetto username and Password. You can click `Save` t
 
 <img src="../fig/winscp_login.png" style="height:350px">
 
-If you log in sucessfully, you will see the files on your local machine on the left, and the Palmetto files on the right:
+If you log in successfully, you will see the files on your local machine on the left, and the Palmetto files on the right:
 
 <img src="../fig/winscp_view.png" style="height:350px">
 
