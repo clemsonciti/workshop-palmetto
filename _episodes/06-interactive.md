@@ -23,7 +23,7 @@ whatsfree
 We can see that the cluster is quite busy, but there is a fair amount of compute nodes that are available for us. Now, let's request one compute node. Please type the following (or paste from the website into your SSH terminal):
 
 ~~~
-qsub -I -l select=1:ncpus=4:mem=10gb,walltime=2:00:00
+qsub -I -l select=1:ncpus=4:mem=10gb:interconnect=1g,walltime=2:00:00
 ~~~
 {: .bash}
 
@@ -37,6 +37,7 @@ Now, let's carefully go through the request:
 - `select=1` means we are asking for one compute node;
 - `ncpus=4` means that we only need four CPUs on the node (since all Palmetto compute nodes have at least 8 CPUs, we might share the compute node with other users, but it's OK because users who use the same node do not interfere with each other);
 - `mem=10gb` means that we are asking for 10 Gb of RAM (you shouldn't ask for less than 8 Gb); again, memory is specific to the user, and not shared between different users who use the same node);
+- `interconnect=1g` is the type of interconnect (the allowed types are `1g`, `fdr` and `hdr`). If you look at the output of `whatsfree` and `cat /etc/hardware-table`, you will see the different CPU/RAM configurations that are available for these three types of interconnect. Typically, but not always, `1g` nodes have less RAM and a smaller number of CPUs than `fdr` and `hdr` (with the `hdr` nodes being the most powerful interms of RAM and CPUs).
 - finally, `walltime=2:00:00` means that we are asking to use the node for 2 hours; after two hours we will be logged off the compute node if we haven't already disconnected.
 
 This is actually a very modest request, and the scheduler should grant it right away. Sometimes, when we are asking for much substantial amount of resources (for example, 20 nodes with 40 cores and 370 Gb of RAM), the scheduler cannot satisfy our request, and will put us into the queue so we will have to wait until the node becomes available. 
@@ -118,18 +119,17 @@ exit
 
 This will bring you back to the login node. See how your prompt has changed to `login001`. It is important to notice that you have to be on a login node to request a compute node. One you are on the compute node, and you want to go to another compute node, you have to exit first.
 
-For some jobs, you might want to get a GPU, or perhaps two GPUs. For such requests, the `qsub` command needs to specify the number of GPUs (one or two) and the type of GPUs (which you can get from `cat /etc/hardware-table`). For example: 
+For some jobs, you might want to get a GPU, or perhaps two GPUs. For such requests, the `qsub` command needs to specify the number of GPUs (one or two) and the type of GPUs (which you can get from `cat /etc/hardware-table`). For example, let's request a NVIDIA Tesla K40 (these nodes are on the `fdr` interconnect so we have to specify that as well):
 
 ~~~
-qsub -I -l select=1:ncpus=4:mem=10gb:ngpus=1:gpu_model=k40,walltime=2:00:00
+qsub -I -l select=1:ncpus=4:mem=10gb:ngpus=1:gpu_model=k40:interconnect=fdr,walltime=2:00:00
 ~~~
 {: .bash}
 
-Another useful `qsub` option is `interconnect`. Interconnect is the way how the nodes are connected to each other. Remember that we have 1g Ethernet nodes and Infiniband nodes. Infinibans nodes may use FDR or HDR type of interonnect. You can specify the interconnect type, for example:
-
+Regarding the interconnect, the three examples below ask for the same combination of CPUs and RAM but with diffrent interconnect types: 
 - `qsub -I -l select=1:ncpus=4:mem=10gb:interconnect=1g,walltime=2:00:00`
-- `qsub -I -l select=1:ncpus=4:mem=10gb:interconnect=FDR,walltime=2:00:00`
-- `qsub -I -l select=1:ncpus=4:mem=10gb:interconnect=HDR,walltime=2:00:00`
+- `qsub -I -l select=1:ncpus=4:mem=10gb:interconnect=fdr,walltime=2:00:00`
+- `qsub -I -l select=1:ncpus=4:mem=10gb:interconnect=hdr,walltime=2:00:00`
 
 If the scheduler receives a request it cannot satisfy, it will complain and not assign you to a compute node (you will stay on the login node). For example, if you ask for 40 CPUs and `interconnect=1g`.
 
@@ -138,7 +138,7 @@ It is possible to ask for several compute nodes at a time, for example `select=4
 It is very important to remember that you shouldn't run computations on the login node, because the login node is shared between everyone who logs into Palmetto, so your computations will interfere with other people's login processes. However, once you are on a compute node, you can run some computations, because each user gets their own CPUs and RAM so there is no interference. If you are on the login node, let's get on the compute node:
 
 ~~~
-qsub -I -l select=1:ncpus=4:mem=10gb,walltime=2:00:00
+qsub -I -l select=1:ncpus=4:mem=10gb:interconnect=1g,walltime=2:00:00
 ~~~
 {: .bash}
 
