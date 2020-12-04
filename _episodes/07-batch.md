@@ -63,7 +63,7 @@ Inside the `nano` text editor, type this (or paste from the Web browser):
 #!/bin/bash
 #
 #PBS -N bigmatrix
-#PBS -l select=1:ncpus=10:mem=10gb
+#PBS -l select=1:ncpus=10:mem=10gb:interconnect=1g
 #PBS -l walltime=0:30:00
 #PBS -o output.txt
 #PBS -j oe
@@ -76,7 +76,7 @@ matlab -r "bigmatrix"
 Let's go through the script, line by line. The first cryptic line says that it's a script that is executed by the Linux shell. The next line is empty, followed by five lines that are the instructions to the scheduler (they start with `#PBS`):
 
 - `-N` specifiies the name of the job (could be anything, I called it `bigmatrix` for the sake of consistency)
-- the first `-l` line is the specification of resources: one node, ten CPUs, ten Gb of RAM
+- the first `-l` line is the specification of resources: one node, ten CPUs, ten Gb of RAM, 1g interconnect
 - the second `-l` line is the amount of walltime (thirty minutes);
 - `-o` specifies the name of the output file where the Matlab output will be printed;
 - `-j oe` means "join output and error", which is, if any errors happen, they will be written into `output.txt`.
@@ -205,4 +205,4 @@ bigmem                1         80          5      168:00:00
 ~~~
 {: .output}
 
-One thing to note is that 1g nodes have maximum walltime of 168 hours (seven days), and InfiniBand nodes have maximum walltime of 72 hours (three days). Since the GPUs are only installed on the InfiniBand nodes, any job that asks for a GPU will also be subject to 72-hour limit. The maximum number of simultaneous jobs really depends on how much CPUs and memory you are asking; for example, for 1 node, 10 CPUs and 10 Gb of RAM (what we asked for in our `bigmatrix` job), we can run 300 jobs on 1g nodes (queue name `c1_single`), but only 15 jobs on InfiniBand nodes (queue name `c2_single`). If your request is modest, the scheduler will try to assign you to a 1g node first, and only if all the 1g nodes are busy, it will try to put you into a InfiniBand node.
+One thing to note is that 1g nodes have maximum walltime of 168 hours (seven days), and InfiniBand (hdr and fdr) nodes have maximum walltime of 72 hours (three days). Since the GPUs are only installed on the InfiniBand nodes, any job that asks for a GPU will also be subject to 72-hour limit. The maximum number of simultaneous jobs really depends on how much CPUs and memory you are asking; for example, for 1 node, 10 CPUs and 10 Gb of RAM (what we asked for in our `bigmatrix` job), we can run 300 jobs on 1g nodes (queue name `c1_single`), but only 15 jobs on InfiniBand nodes (queue name `c2_single`). 
