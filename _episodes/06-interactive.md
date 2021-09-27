@@ -119,10 +119,10 @@ exit
 
 This will bring you back to the login node. See how your prompt has changed to `login001`. It is important to notice that you have to be on a login node to request a compute node. One you are on the compute node, and you want to go to another compute node, you have to exit first.
 
-For some jobs, you might want to get a GPU, or perhaps two GPUs. For such requests, the `qsub` command needs to specify the number of GPUs (one or two) and the type of GPUs (which you can get from `cat /etc/hardware-table`). For example, let's request a NVIDIA Tesla K40 (these nodes are on the `fdr` interconnect so we have to specify that as well):
+For some jobs, you might want to get a GPU, or perhaps two GPUs. For such requests, the `qsub` command needs to specify the number of GPUs (one or two) and the type of GPUs (which you can get from `cat /etc/hardware-table`). For example, let's request a NVIDIA Tesla K40:
 
 ~~~
-qsub -I -l select=1:ncpus=4:mem=10gb:ngpus=1:gpu_model=k40:interconnect=fdr,walltime=2:00:00
+qsub -I -l select=1:ncpus=4:mem=10gb:ngpus=1:gpu_model=k40,walltime=2:00:00
 ~~~
 {: .bash}
 
