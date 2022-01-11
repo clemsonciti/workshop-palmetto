@@ -39,8 +39,6 @@ pwd
 
 100 Gb might be enough for some, but for people dealing with extensive amounts of data that would not be enough. We also offer the access to *scratch space*, which is about 2 Petabytes in total. Scratch space is not backed up; files that haven't been used for more than 4 months are automatically deleted (and cannot be restored). Scratch storage has been optimized for handling a lot of reading and writing; in particular, if your workflow involvescreating temporary files that will be constantly modified, it is much better to use scratch space than to run your workflow from your home directory (because the process will put a lot of strain on the home directory). We strongly encourage people to use scratch space, but please be aware of its temporary nature. When you get anything that is worth keeping, please back it up, either in your home directory, or on your local machine.
 
-Scratch space is divided into two directories: `scratch1` (1.88 Petabytes) and `scratch2` (188 Terabytes). `scratch1` uses a faster system for more rapid file transfer, and is well suited for jobs with thousands of read/write requests. `scratch2` is better suited for read/write jobs that are performed in parallel.
-
 For ever Palmetto user, their scratch space is located in  `/scratch1/<username>` folder. You can access it with the `cd` ("change directory") command:
 
 ~~~
