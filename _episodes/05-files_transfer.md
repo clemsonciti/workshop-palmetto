@@ -71,5 +71,5 @@ scp -r myfolder gyourga@xfer01-ext.palmetto.clemson.edu:/home/gyourga/
 
 ### transferring large amounts of data
 
-If you need to transfer several gigabytes of data, and you find WinSCP / FileZilla too slow, you can use Globus. The interface is not as intuitive, but the file transfer speeds are much higher. [The guide to using Globus is on our website](https://www.palmetto.clemson.edu/palmetto/basic/started/#transfer-large-files-using-globus).
+If you need to transfer several gigabytes of data, and you find CyberDuck too slow, you can use Globus. The interface is not as intuitive, but the file transfer speeds are much higher. [The guide to using Globus is on our website](https://www.palmetto.clemson.edu/palmetto/basic/started/#transfer-large-files-using-globus).
 
