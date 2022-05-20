@@ -7,12 +7,12 @@ exercises: 0
 objectives:
 - home directory, scratch space
 keypoints:
-- "users get 100 Gb of backed-up storage in their home directories"
-- "they also have access to more than 2 Pb of scratch storage"
-- "scratch storage is not backed up, and files left unused for 1 month are deleted"
+- "users get 100 GB of backed-up storage in their home directories"
+- "they also have access to more than 2 PB of scratch storage"
+- "scratch storage is not backed up, and files left unused for 4 months are deleted"
 ---
 
-Every Palmetto user gets 100 Gb of storage space; this storage is backed up at the end of every day, and the backup is kept for 42 days. So if you accidentally delete a file that was created more than a day ago, we might be able to restore it. This storage is called *home directory*.
+Every Palmetto user gets 100 GB of storage space; this storage is backed up at the end of every day, and the backup is kept for 42 days. So if you accidentally delete a file that was created more than a day ago, we might be able to restore it. This storage is called *home directory*.
 
 To see how much space you have left in your home directory, please type:
 
@@ -37,7 +37,7 @@ pwd
 ~~~
 {: .output}
 
-100 Gb might be enough for some, but for people dealing with extensive amounts of data that would not be enough. We also offer the access to *scratch space*, which is about 2 Petabytes in total. Scratch space is not backed up; files that haven't been used for more than 4 months are automatically deleted (and cannot be restored). Scratch storage has been optimized for handling a lot of reading and writing; in particular, if your workflow involvescreating temporary files that will be constantly modified, it is much better to use scratch space than to run your workflow from your home directory (because the process will put a lot of strain on the home directory). We strongly encourage people to use scratch space, but please be aware of its temporary nature. When you get anything that is worth keeping, please back it up, either in your home directory, or on your local machine.
+100 GB might be enough for some, but for people dealing with extensive amounts of data that would not be enough. We also offer the access to *scratch space*, which is about 2 Petabytes in total. Scratch space is not backed up; files that haven't been used for more than 4 months are automatically deleted (and cannot be restored). Scratch storage has been optimized for handling a lot of reading and writing; in particular, if your workflow involvescreating temporary files that will be constantly modified, it is much better to use scratch space than to run your workflow from your home directory (because the process will put a lot of strain on the home directory). We strongly encourage people to use scratch space, but please be aware of its temporary nature. When you get anything that is worth keeping, please back it up, either in your home directory, or on your local machine.
 
 For ever Palmetto user, their scratch space is located in  `/scratch1/<username>` folder. You can access it with the `cd` ("change directory") command:
 
