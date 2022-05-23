@@ -31,18 +31,18 @@ Enter your account password and do the two-factor identification. This will brin
 From here, you can run scripts on the login node (such as `checkquota`, `checkqueucfg`, `whatsfree`), and request compute nodes with `qsub`.
 
 You can use OpenOD to run certain applications like Jupyter and Tensorflow notebooks, R Studio, and Matlab. Let's run R Studio. From "Interactive apps", please select "RStudio server":
-<img src="../fig/rstudio1.png" style="height:200px">
+<img src="../fig/rstudio1.png" style="height:300px">
 
 Please fill out the request as shown on this picture:
-<img src="../fig/rstudio2.png" style="height:200px">
+<img src="../fig/rstudio2.png" style="height:500px">
 
 This is basically a graphical interface to `qsub`. You are asking for 1 compute node, 5 CPUs, 10 GB of memory, no GPU, 1g interconnect (that is, a c1 node), for the walltime duration of 6 hours. Once you are done entering this information, please click the blue "Launch" button at the bottom. It will bring out a new screen:
 
-<img src="../fig/rstudio3.png" style="height:200px">
+<img src="../fig/rstudio3.png">
 
 This means your request is being processed. Once the compute node is ready, you will see a blue button under your request saying "Connect to RStudio server":
 
-<img src="../fig/rstudio4.png" style="height:200px">
+<img src="../fig/rstudio4.png">
 
 Click on it, and it will start RStudio.
 
