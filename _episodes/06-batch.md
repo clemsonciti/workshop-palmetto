@@ -164,45 +164,36 @@ checkqueuecfg
 ~~~
 {: .bash}
 
-You will see something like this:
+This script produces a lot of output. Here's the first few lines:
 ~~~
 1G QUEUES     min_cores_per_job  max_cores_per_job   max_mem_per_queue  max_jobs_per_queue   max_walltime
-c1_solo                       1                  1              5000gb                 500      168:00:00
-c1_single                     2                 24             36000gb                 300      168:00:00
-c1_tiny                      25                128             25600gb                  25      168:00:00
-c1_small                    129                512              8192gb                   2      168:00:00
-c1_medium                   513               2048             32768gb                   2      168:00:00
-c1_large                   2049               4096                 0gb                   0      168:00:00
+c1_solo                       1                  1             20000gb                2000      336:00:00
+c1_single                     2                 24             30000gb                 250      336:00:00
+c1_tiny                      25                128            102400gb                 100      336:00:00
+c1_small                    129                512             81920gb                  20      336:00:00
+c1_medium                   513               2048             81920gb                   5      336:00:00
+c1_large                   2049               4096             65536gb                   2      336:00:00
 
 IB QUEUES     min_cores_per_job  max_cores_per_job   max_mem_per_queue  max_jobs_per_queue   max_walltime
-c2_single                     1                 40              6000gb                  15       72:00:00
-c2_tiny                      41                200             16000gb                   5       72:00:00
-c2_small                    201                512              6144gb                   1       72:00:00
-c2_medium                   513               2048             16384gb                   1       72:00:00
-c2_large                   2049               4096                 0gb                   0       72:00:00
+c2_single                     1                 56             10000gb                  25       72:00:00
+c2_tiny                      57                200             32000gb                  10       72:00:00
+c2_small                    201                512             21504gb                   3       72:00:00
+c2_medium                   513               2048             32768gb                   2       72:00:00
+c2_large                   2049               4096             32768gb                   1       72:00:00
 
-GPU QUEUES     min_gpus_per_job   max_gpus_per_job  min_cores_per_job  max_cores_per_job   max_mem_per_queue  max_jobs_per_queue   max_walltime
-gpu_small                     1                  4                  1                 96              4320gb                  15       72:00:00
-gpu_medium                    5                 16                  1                256              6144gb                   4       72:00:00
-gpu_large                    17                256                  1               2048             12288gb                   2       72:00:00
+c2_fdr_single                  1                 56             70000gb                 175       72:00:00
+c2_fdr_tiny                   57                200            112000gb                  35       72:00:00
+c2_fdr_small                 201                512             21504gb                   3       72:00:00
+c2_fdr_medium                513               2048             32768gb                   2       72:00:00
+c2_fdr_large                2049               4096             32768gb                   1       72:00:00
 
-VGPU QUEUES   min_vgpus_per_job  max_vgpus_per_job  min_cores_per_job  max_cores_per_job   max_mem_per_queue  max_jobs_per_queue   max_walltime
-vgpu_small                    1                  1                  1                  4               320gb                  10       72:00:00
+c2_hdr_single                  1                 56              6000gb                   5       72:00:00
+c2_hdr_tiny                   57                200              9600gb                   3       72:00:00
+c2_hdr_small                 201                512             14336gb                   2       72:00:00
+c2_hdr_medium                513               2048             16384gb                   1       72:00:00
+c2_hdr_large                2049               4096             32768gb                   1       72:00:00
 
-SMP QUEUE     min_cores  max_cores   max_jobs   max_walltime
-bigmem                1         80          5      168:00:00
-
-
-   'max_mem' is the maximum amount of memory all your jobs in this queue can
-   consume at any one time.  For example, if the max_mem for the solo queue
-   is 4000gb, and your solo jobs each need 10gb, then you can run a
-   maximum number of 4000/10 = 400 jobs in the solo queue, even though the
-   current max_jobs setting for the solo queue may be set higher than 400.
-
-
-   NOTE:  Although you may be within the limits for a queue, there may not
-          be any resources of the type you are requesting currently available.
 ~~~
 {: .output}
 
-One thing to note is that 1g nodes have maximum walltime of 168 hours (seven days), and InfiniBand (hdr and fdr) nodes have maximum walltime of 72 hours (three days). Since the GPUs are only installed on the InfiniBand nodes, any job that asks for a GPU will also be subject to 72-hour limit. The maximum number of simultaneous jobs really depends on how much CPUs and memory you are asking; for example, for 1 node, 10 CPUs and 10 Gb of RAM (what we asked for in our `bigmatrix` job), we can run 300 jobs on 1g nodes (queue name `c1_single`), but only 15 jobs on InfiniBand nodes (queue name `c2_single`). 
+One thing to note is that 1g nodes have maximum walltime of 336 hours (two weeks), and InfiniBand (hdr and fdr) nodes have maximum walltime of 72 hours (three days). Since the GPUs are only installed on the InfiniBand nodes, any job that asks for a GPU will also be subject to 72-hour limit. The maximum number of simultaneous jobs really depends on how much CPUs and memory you are asking; for example, for 1 node, 10 CPUs and 10 Gb of RAM (what we asked for in our `bigmatrix` job), we can run 250 jobs on 1g nodes (queue name `c1_single`), but only 25 jobs on InfiniBand nodes (queue name `c2_single`). This number changes day to day, depending on how busy the cluster is --on busy days, this number is lowered so more people have a chance to run their jobs on Palmetto.
