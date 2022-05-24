@@ -16,7 +16,7 @@ https://openod02.palmetto.clemson.edu
 
 You will need to login with your Clemson username and password, and perform a DUO check. 
 
-<img src="../fig/openod_dashboard.png" alt="Open OnDemand Dashboard" style="height:600px">
+<img src="../fig/openod_dashboard.png" alt="Open OnDemand Dashboard" style="height:400px">
 
 One convenient feature of Open OnDemand is a file browser. In the top left corner, you will see the "Files" button, which will take you to your home diretory or to scratch directory. Click it and explore the files in your file system. You can use this feature to view, edit, and delete files. It is also a convenient way to upload and download the files. You can go to any folder that you have access to by clicking "Go to".
 
