@@ -8,7 +8,7 @@ objectives:
 - "Logging into Palmetto from a browser."
 ---
 
-We have an interface to Palmetto that works through a Web browser. This interface is called "Open On Demand", or OpenPD for short. To access it, go to 
+We have an interface to Palmetto that works through a Web browser. This interface is called "Open On Demand", or OpenOD for short. To access it, go to 
 
 ```
 https://openod02.palmetto.clemson.edu
