@@ -7,7 +7,7 @@ questions:
 objectives:
 - "Logging into Palmetto from a browser."
 ---
-
+<!---
 We have an interface to Palmetto that works through a Web browser. This interface is called "Open On Demand", or OpenOD for short. To access it, go to 
 
 ```
@@ -29,6 +29,8 @@ Enter your account password and do the two-factor identification. This will brin
 <img src="../fig/openod_shell.png" alt="Open OnDemand Shell Menu" style="height:500px">
 
 From here, you can run scripts on the login node (such as `checkquota`, `checkqueucfg`, `whatsfree`), and request compute nodes with `qsub`.
+
+-->
 
 You can use OpenOD to run certain applications like Jupyter and Tensorflow notebooks, R Studio, and Matlab. Let's run R Studio. From "Interactive apps", please select "RStudio server":
 <img src="../fig/rstudio1.png" style="height:300px">
