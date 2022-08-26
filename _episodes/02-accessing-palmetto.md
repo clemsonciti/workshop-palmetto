@@ -5,71 +5,30 @@ exercises: 0
 questions:
 - "How can I access the Palmetto cluster from my local machine?"
 objectives:
-- SSH client, Terminal, MobaXTerm
+- OpenOD
 keypoints:
-- "Palmetto can be accessed by an SSh (secure shell) client"
-- "Windows user can use `MobaXTerm` application"
-- "Mac users can use the `Terminal` application"
+- "Palmetto can be accessed in a web browser through Open On Demand interface"
+- "This interface can be used to transfer the files and to start a terminal"
 ---
 
-Pametto is accessed using the SSH (["Secure shell"](https://en.wikipedia.org/wiki/Ssh_(Secure_Shell))) protocol. Palmetto runs the *SSH server*; on your local machine, you will need to run *SSH client* which connects to a server using a command-line *terminal*. The commands that are entered on the terminal are processed by the server on Palmetto.
+There are several ways to access the Palmetto cluster. Perhaps the easiest is through a web interface called Open On Demand. To start it, open a web browser, and go to this website:
 
-To start the SSH client on a Mac, you can open the Terminal Application (which is usually located in `Applications` &rarr; `Utilities`) and run the following:
+```
+https://openod.palmetto.clemson.edu
+```
 
-~~~
-ssh login.palmetto.clemson.edu
-~~~
-{: .bash}
+You will need to login with your Clemson username and password, and perform a DUO check. 
 
-For Windows, first you need to download and install
-[MobaXterm Home Edition](https://mobaxterm.mobatek.net/download.html).
+<img src="../fig/openod_dashboard.png" alt="Open OnDemand Dashboard" style="height:400px">
 
-> It is important that you unzip the downloaded installer prior to installation.
-> The zipped installer file contains an additional data file besides the installer
-> executable. This data file is not accessible if the installer executable is
-> called from inside the zipped file (something Windows allows you to do).
-{: .callout}
+One convenient feature of Open OnDemand is a file browser. In the top left corner, you will see the "Files" button, which will take you to your home diretory or to scratch directory. Click it and explore the files in your file system. You can use this feature to view, edit, and delete files. It is also a convenient way to upload and download the files. You can go to any folder that you have access to by clicking "Go to". Try to upload any file inside your home directory.
 
-After MobaXterm starts, click the `Session` button.
+The file browser on OpenOD is very user-friendly, but it is limited to files that are smaller than 100 MB. Later in this workshop, we will talk about transferring larger files. 
 
-<img src="../fig/mobaxterm_0.png" alt="Main MobaXterm Windows" style="height:350px">
+Another useful feature of Open OD is the terminal. You can enter any commands, and they will be executed on Palmetto. To start the terminal, click on `Clusters`, then `Palmetto Shell Access`:
 
+<img src="../fig/openod_shell_access.png" alt="Open OnDemand Shell Menu" style="height:300px">
 
-Select SSH session and use the following parameters (whichever required), then click `OK`:
+Enter your account password and do the two-factor identification. This will bring you to the login node of Palmetto:
 
-* Remote host: `login.palmetto.clemson.edu`
-* SSH-browser type: Enhanced SCP
-* Port: 22
-
-<img src="../fig/mobaxterm_1.png" alt="MobaXterm SSH Session" style="height:350px">
-
-At this stage, for both Mac and Windows, you will be asked to enter your username
-and password, then DUO option.
-
-<img src="../fig/mobaxterm_2.png" alt="Login interface" style="height:350px">
-
-When logged in,
-you are presented with a welcome message
-and the following "prompt":
-
-~~~
-[username@login001 ~]$
-~~~
-{: .bash}
-
-The prompt in a bash shell usually
-contains a (`$`) sign,
-and shows that the shell is waiting for input.
-The prompt may also contain other information:
-this prompt tells you `your username` and which node
-you are connected to -
-`login001` is the "login" node.
-It also tells you your current directory,
-i.e., `~`, which, as you will learn shortly,
-is short for your *home* directory.
-
-In the figure below, MobaXterm also gives you a GUI browser of your home
-directory on Palmetto. For Mac OS and Linux terminal, you will only have the
-command line interface to the right.
-
-<img src="../fig/mobaxterm_4.png" alt="MobaXterm interface" style="height:350px">
+<img src="../fig/openod_shell.png" alt="Open OnDemand Shell Menu" style="height:500px">
