@@ -24,7 +24,7 @@ Let's configure the connection:
 - make sure that Port is set to 22;
 - specify your Palmetto username and password.
 
-Then, click on "Connect". Another window will pop out asking you to do two-factor verification:
+Then, click on "Connect". If it complains about an "unknown fingerprint", click "Allow". Another window will pop out asking you to do two-factor verification:
 
 <img src="../fig/cyberduck_2fa.png" style="height:600px">
 
