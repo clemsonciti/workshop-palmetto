@@ -35,21 +35,21 @@ Type "1" (the number one) or the word "push" if you want to get a DUO push notif
 Another option for advanced Mac and Linux users is to use the `scp` command from the terminal. Open a new terminal, but **don't connect to Palmetto**. The `scp` command works like this:
 
 ~~~
-scp <path_to_source> username@xfer01-ext.palmetto.clemson.edu:<path_to_destination>
+scp <path_to_source> username@xfer02-ext.clemson.edu:<path_to_destination>
 ~~~
 {: .bash}
 
 For example, here is the `scp` command to copy a file from the current directory on my local machine to my home directory on Palmetto (`gyourga` is my Palmetto username: 
 
 ~~~
-scp myfile.txt gyourga@xfer01-ext.palmetto.clemson.edu:/home/gyourga/
+scp myfile.txt gyourga@xfer02-ext.clemson.edu:/home/gyourga/
 ~~~
 {: .bash}
 
 ... and to do the same in reverse, i.e., copy from Palmetto to my local machine:
 
 ~~~
-scp gyourga@xfer01-ext.palmetto.clemson.edu:/home/gyourga/myfile.txt .
+scp gyourga@xfer02-ext.clemson.edu:/home/gyourga/myfile.txt .
 ~~~
 {: .bash}
 
@@ -58,7 +58,7 @@ The . represents the working directory on the local machine.
 To copy entire folders, include the -r switch:
 
 ~~~
-scp -r myfolder gyourga@xfer01-ext.palmetto.clemson.edu:/home/gyourga/
+scp -r myfolder gyourga@xfer02-ext.clemson.edu:/home/gyourga/
 ~~~
 {: .bash}
 
