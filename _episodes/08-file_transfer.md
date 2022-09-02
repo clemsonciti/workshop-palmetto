@@ -20,7 +20,7 @@ After installation, click on "Open Connection". A new window will pop out:
 
 Let's configure the connection:
 - in the drop-down menu on top, select "SFTP" instead of the default "FTP";
-- in the "Server", please specify `xfer01-ext.palmetto.clemson.edu`;
+- in the "Server", please specify `xfer02-ext.clemson.edu`;
 - make sure that Port is set to 22;
 - specify your Palmetto username and password.
 
